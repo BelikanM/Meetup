@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Application de Rencontres</title>
+</head>
+<body>
+    <h1>Bienvenue sur notre Application de Rencontres</h1>
+    <ul>
+    {% for utilisateur in utilisateurs %}
+        <li>{{ utilisateur.nom }} - {{ utilisateur.email }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
