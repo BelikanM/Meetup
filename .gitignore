@@ -1,0 +1,24 @@
+# Ignore .env for security reasons
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+myenv/
+
+# Ignore Flask instance folder
+instance/
+
+# Ignore migrations folder (if using Flask-Migrate)
+migrations/
+
+# Ignore VSCode settings (if using VSCode)
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore other IDE settings
+.idea/

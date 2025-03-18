@@ -1,18 +1,18 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from config import Config
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Dieu19961991%3F%3F%21@localhost/flask_meetup_db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config.from_object(Config)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-# Example route
 @app.route('/')
-def index():
-    return "Hello, World!"
+def home():
+    return "Hello, Flask with MySQL and Appwrite!"
 
 if __name__ == '__main__':
     app.run(debug=True)
+
